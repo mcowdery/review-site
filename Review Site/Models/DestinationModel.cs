@@ -15,6 +15,6 @@ namespace Review_Site.Models
         public int YearBuilt { get; set; }
         public int VisitDuration { get; set; }
         public decimal Price { get; set; }
-        public virtual ICollection<Review> Reviews { get; set; } = null!;
+        public virtual ICollection<ReviewModel> Reviews { get; set; } = null!;
     }
 }

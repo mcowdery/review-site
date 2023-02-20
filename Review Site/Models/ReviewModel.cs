@@ -8,7 +8,7 @@ namespace Review_Site.Models
         public int Id { get; set; }
         [Required]
         [StringLength(100)]
-        public string ReviwerName { get; set; }
+        public string ReviewerName { get; set; }
         public string Content { get; set; }
     }
 }

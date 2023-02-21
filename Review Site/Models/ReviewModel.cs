@@ -2,7 +2,7 @@
 
 namespace Review_Site.Models
 {
-    public class ReviewModel
+    public class DestinationModel
     {
         [Key]
         public int Id { get; set; }

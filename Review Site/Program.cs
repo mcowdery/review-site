@@ -1,7 +1,10 @@
+using Review_Site.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<ReviewSiteContext>();
 
 var app = builder.Build();
 

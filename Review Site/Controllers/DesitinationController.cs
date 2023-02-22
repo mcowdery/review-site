@@ -1,12 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Review_Site.Data;
 
 namespace Review_Site.Controllers
 {
-    public class DesitinationController : Controller
+    public class DestinationController : Controller
     {
-        public IActionResult Index()
+        private readonly ReviewSiteContext _context;
+
+        public DestinationController(ReviewSiteContext context)
         {
-            return View();
+            _context = context; 
+        }
+        public ActionResult Index()
+        {
+            return View(_context.Destinations.ToList());
         }
     }
 }

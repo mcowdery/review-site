@@ -53,10 +53,7 @@ namespace Review_Site.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("VisitDuration")
-                        .HasColumnType("int");
-
-                    b.Property<int>("YearBuilt")
+                    b.Property<int>("TourDuration")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -69,24 +66,22 @@ namespace Review_Site.Migrations
                         new
                         {
                             Id = 1,
-                            City = "Rome",
-                            Country = "Italy",
+                            City = "London, Edinborough, Dublin, Newport",
+                            Country = "England, Scotland, Whales,Ireland",
                             Description = "The Colosseum in Rome, Italy, is a large amphitheater that hosted events like gladiatorial games.",
-                            Name = "Colleseum",
-                            Price = 23.22m,
-                            VisitDuration = 60,
-                            YearBuilt = 80
+                            Name = "UK Tour",
+                            Price = 10000m,
+                            TourDuration = 10
                         },
                         new
                         {
                             Id = 2,
-                            City = "Nara",
+                            City = "Nara, Tokyo, Osaka, Kyoto",
                             Country = "Japan",
                             Description = "Nara Park, one of Nara's most famous destinations, is famous for being able to interact with deer that roam in the park. There are various spots in the vicinity, such as the Ukimido Pavilion and Mt. Wakakusa.",
-                            Name = "Nara Park",
-                            Price = 0m,
-                            VisitDuration = 60,
-                            YearBuilt = 80
+                            Name = "Tour of Japan",
+                            Price = 8000m,
+                            TourDuration = 21
                         });
                 });
 
@@ -102,10 +97,21 @@ namespace Review_Site.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("DateTime")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageURL")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ReviewerName")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("StarRating")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -116,13 +122,19 @@ namespace Review_Site.Migrations
                         {
                             Id = 1,
                             Content = "It's okay",
-                            ReviewerName = "Sergei"
+                            DateTime = "20140112180244",
+                            ImageURL = "https://res.taketours.com/images/640/Edinburgh%20Castle-Edinburgh-Scotland-UK.jpg",
+                            ReviewerName = "Sergei",
+                            StarRating = 5
                         },
                         new
                         {
                             Id = 2,
                             Content = "It's decent",
-                            ReviewerName = "Mat"
+                            DateTime = "20140112180244",
+                            ImageURL = "https://media.timeout.com/images/105240237/750/422/image.jpg",
+                            ReviewerName = "Mat",
+                            StarRating = 5
                         });
                 });
 

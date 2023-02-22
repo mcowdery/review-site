@@ -10,11 +10,14 @@ namespace Review_Site.Models
         [StringLength(50)]
         public string Name { get; set; } = null!;
         public string Description { get; set; }
-        public string Country { get; set; }
-        public string City { get; set; }
-        public int YearBuilt { get; set; }
-        public int VisitDuration { get; set; }
+        public List<string> Countries { get; set; }
+        public List<string> Cities { get; set; }
+        public int TourDuration { get; set; }
         public decimal Price { get; set; }
         public virtual ICollection<DestinationModel> Reviews { get; set; } = null!;
     }
 }
+
+
+
+

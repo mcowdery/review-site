@@ -10,5 +10,8 @@ namespace Review_Site.Models
         [StringLength(100)]
         public string ReviewerName { get; set; }
         public string Content { get; set; }
+        public string ImageURL { get; set; }
+        public string DateTime { get; set; }
+        public int StarRating { get; set; } 
     }
 }

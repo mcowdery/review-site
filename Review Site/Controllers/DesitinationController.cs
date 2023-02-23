@@ -23,15 +23,16 @@ namespace Review_Site.Controllers
             return View();
         }
         [HttpPost]
-
         public ActionResult Create(DestinationModel destination)
         {
             if (ModelState.IsValid)
             {
+                //return Problem("Entity set 'GameContext.BoardGames is null");
                 _context.Destinations.Add(destination);
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
+            //return Problem("Entity set 'GameContext.BoardGames is something else");
             return View(destination);
         }
 

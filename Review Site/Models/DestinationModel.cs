@@ -14,18 +14,9 @@ namespace Review_Site.Models
         public string Country { get; set; }
         public string City { get; set; }
         public int TourDuration { get; set; }
-        public decimal Price { get; set; }
-        [NotMapped]
-        public List<string> Countries
-        {
-            get { return Country.Split(',').ToList(); }
-        }
-        [NotMapped]
-        public List<string> Cities
-        {
-            get { return City.Split(',').ToList(); }
-        }
-        public virtual ICollection<DestinationModel> Reviews { get; set; } = null!;
+        public int Price { get; set; }
+        public string ImageURL { get; set; }
+        public virtual ICollection<ReviewModel>? Reviews { get; set; }//? menas it can be a null value
     }
 }
 

@@ -4,11 +4,37 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Tour Company Name</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+<body>
+    <div class="Tokyo">
+        <div class="infoBlockTokyo">
+            
+        </div>
+    </div>
+
+
+
+    <div class="Rome">
+        <div class="infoBlockRome">
+
+        </div>
+    </div>
+    <div class="Paris">
+        <div class="infoBlockParis">
+
+        </div>
+    </div>
+    <div class="Mars">
+        <div class="infoBlockMars">
+
+        </div>
+    </div>
+</body>
+
 <table class="table">
     <thead>
         <tr>
@@ -58,7 +84,7 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ImageURL)
+                <img src="@Html.DisplayFor(modelItem => item.ImageURL)">
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

@@ -60,9 +60,10 @@ namespace Review_Site.Migrations
                 columns: new[] { "Id", "City", "Country", "Description", "ImageURL", "Name", "Price", "TourDuration" },
                 values: new object[,]
                 {
-                    { 1, "Rome", "Italy", "See famous Colliseum, Spanish Steps, Pantheon, St.Peter's Basilica, Trevi Fountain and much more.", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.city-sightseeing.it%2Fhop-on-hop-off-rome%2F&psig=AOvVaw3ZOY9UZJV2tCQR915UXZI2&ust=1677252037140000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCPjg4fH4q_0CFQAAAAAdAAAAABAE", "Tour of Rome", 10000, 7 },
-                    { 2, "Tokyo", "Japan", "See Imperial Palace, Hachikō Memorial Statue, Unicorn Gundam Statue, Senso-Ji Temple and so much more", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.getyourguide.com%2Ftokyo-l193%2F&psig=AOvVaw07tvt2cEmWv6F7uisoLXXl&ust=1677251934110000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCMim5sD4q_0CFQAAAAAdAAAAABAE", "Tour of Tokyo", 8000, 10 },
-                    { 3, "Paris", "France", "See the Eiffel Tower, Louvre Museum, Arc de Triumphe, Notre Dame Cathedral and more", "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/32/31/ce.jpg", "Tour of Paris", 7000, 6 }
+                    { 1, "Tokyo", "Japan", "See Imperial Palace, Hachikō Memorial Statue, Unicorn Gundam Statue, Senso-Ji Temple and so much more", "\\Images\\Tokyo1.jpg", "Tour of Tokyo", 8000, 10 },
+                    { 2, "Rome", "Italy", "See famous Colliseum, Spanish Steps, Pantheon, St.Peter's Basilica, Trevi Fountain and much more.", "\\Images\\Rome1.jpg", "Tour of Rome", 10000, 7 },
+                    { 3, "Paris", "France", "See the Eiffel Tower, Louvre Museum, Arc de Triumphe, Notre Dame Cathedral and more", "\\Images\\Paris1.jpg", "Tour of Paris", 7000, 6 },
+                    { 4, "Random Crater", "Sea of Tranquility", "See what no man in history has seen. Be the first to discover the Red Planet", "\\Images\\Mars1.jpg", "Tour of Mars", 7000, 6 }
                 });
 
             migrationBuilder.InsertData(

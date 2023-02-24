@@ -64,24 +64,24 @@ namespace Review_Site.Migrations
                         new
                         {
                             Id = 1,
-                            City = "Rome",
-                            Country = "Italy",
-                            Description = "See famous Colliseum, Spanish Steps, Pantheon, St.Peter's Basilica, Trevi Fountain and much more.",
-                            ImageURL = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.city-sightseeing.it%2Fhop-on-hop-off-rome%2F&psig=AOvVaw3ZOY9UZJV2tCQR915UXZI2&ust=1677252037140000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCPjg4fH4q_0CFQAAAAAdAAAAABAE",
-                            Name = "Tour of Rome",
-                            Price = 10000,
-                            TourDuration = 7
+                            City = "Tokyo",
+                            Country = "Japan",
+                            Description = "See Imperial Palace, Hachikō Memorial Statue, Unicorn Gundam Statue, Senso-Ji Temple and so much more",
+                            ImageURL = "\\Images\\Tokyo1.jpg",
+                            Name = "Tour of Tokyo",
+                            Price = 8000,
+                            TourDuration = 10
                         },
                         new
                         {
                             Id = 2,
-                            City = "Tokyo",
-                            Country = "Japan",
-                            Description = "See Imperial Palace, Hachikō Memorial Statue, Unicorn Gundam Statue, Senso-Ji Temple and so much more",
-                            ImageURL = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.getyourguide.com%2Ftokyo-l193%2F&psig=AOvVaw07tvt2cEmWv6F7uisoLXXl&ust=1677251934110000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCMim5sD4q_0CFQAAAAAdAAAAABAE",
-                            Name = "Tour of Tokyo",
-                            Price = 8000,
-                            TourDuration = 10
+                            City = "Rome",
+                            Country = "Italy",
+                            Description = "See famous Colliseum, Spanish Steps, Pantheon, St.Peter's Basilica, Trevi Fountain and much more.",
+                            ImageURL = "\\Images\\Rome1.jpg",
+                            Name = "Tour of Rome",
+                            Price = 10000,
+                            TourDuration = 7
                         },
                         new
                         {
@@ -89,8 +89,19 @@ namespace Review_Site.Migrations
                             City = "Paris",
                             Country = "France",
                             Description = "See the Eiffel Tower, Louvre Museum, Arc de Triumphe, Notre Dame Cathedral and more",
-                            ImageURL = "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/32/31/ce.jpg",
+                            ImageURL = "\\Images\\Paris1.jpg",
                             Name = "Tour of Paris",
+                            Price = 7000,
+                            TourDuration = 6
+                        },
+                        new
+                        {
+                            Id = 4,
+                            City = "Random Crater",
+                            Country = "Sea of Tranquility",
+                            Description = "See what no man in history has seen. Be the first to discover the Red Planet",
+                            ImageURL = "\\Images\\Mars1.jpg",
+                            Name = "Tour of Mars",
                             Price = 7000,
                             TourDuration = 6
                         });

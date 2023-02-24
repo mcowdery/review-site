@@ -11,7 +11,7 @@ namespace Review_Site.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string connectionString = "Server=(localdb)\\mssqllocaldb;Database=ReviewSite11;Trusted_Connection=True;";
+            string connectionString = "Server=(localdb)\\mssqllocaldb;Database=ReviewSite12;Trusted_Connection=True;";
             optionsBuilder.UseSqlServer(connectionString);
         }
 
@@ -21,24 +21,24 @@ namespace Review_Site.Data
                 new DestinationModel()
                 {
                     Id = 1,
+                    Name = "Tour of Tokyo",
+                    City = "Tokyo",
+                    Country = "Japan",
+                    Description = "See Imperial Palace, Hachikō Memorial Statue, Unicorn Gundam Statue, Senso-Ji Temple and so much more",
+                    ImageURL = "\\Images\\Tokyo1.jpg",
+                    Price = 8000,
+                    TourDuration = 10
+                },
+                new DestinationModel()
+                {
+                    Id = 2,
                     Name = "Tour of Rome",
                     City = "Rome",
                     Country = "Italy",
                     Description= "See famous Colliseum, Spanish Steps, Pantheon, St.Peter's Basilica, Trevi Fountain and much more.",
                     Price = 10000,
-                    ImageURL = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.city-sightseeing.it%2Fhop-on-hop-off-rome%2F&psig=AOvVaw3ZOY9UZJV2tCQR915UXZI2&ust=1677252037140000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCPjg4fH4q_0CFQAAAAAdAAAAABAE",
+                    ImageURL = "\\Images\\Rome1.jpg",
                     TourDuration = 7  
-                },
-                new DestinationModel()
-                {
-                    Id = 2,
-                    Name = "Tour of Tokyo",
-                    City = "Tokyo",
-                    Country = "Japan",
-                    Description = "See Imperial Palace, Hachikō Memorial Statue, Unicorn Gundam Statue, Senso-Ji Temple and so much more",
-                    ImageURL = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.getyourguide.com%2Ftokyo-l193%2F&psig=AOvVaw07tvt2cEmWv6F7uisoLXXl&ust=1677251934110000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCMim5sD4q_0CFQAAAAAdAAAAABAE",
-                    Price = 8000,
-                    TourDuration = 10
                 },
                 new DestinationModel()
                 {
@@ -47,10 +47,22 @@ namespace Review_Site.Data
                     City = "Paris",
                     Country = "France",
                     Description = "See the Eiffel Tower, Louvre Museum, Arc de Triumphe, Notre Dame Cathedral and more",
-                    ImageURL = "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/32/31/ce.jpg",
+                    ImageURL = "\\Images\\Paris1.jpg",
+                    Price = 7000,
+                    TourDuration = 6
+                },
+                new DestinationModel()
+                {
+                    Id = 4,
+                    Name = "Tour of Mars",
+                    City = "Random Crater",
+                    Country = "Sea of Tranquility",
+                    Description = "See what no man in history has seen. Be the first to discover the Red Planet",
+                    ImageURL = "\\Images\\Mars1.jpg",
                     Price = 7000,
                     TourDuration = 6
                 });
+
             modelBuilder.Entity<ReviewModel>().HasData(
                new ReviewModel()
                {

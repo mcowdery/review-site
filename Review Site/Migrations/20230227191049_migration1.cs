@@ -7,7 +7,7 @@
 namespace Review_Site.Migrations
 {
     /// <inheritdoc />
-    public partial class FirstMigration : Migration
+    public partial class migration1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

@@ -17,7 +17,9 @@ body {
   margin-bottom: 60px;
 }
 
-
+#row1 {
+    background-image: url("https://localhost:7186/Images/Tokyo1.jpg")
+}
 
 /*tbody {
     background-color: aqua*/

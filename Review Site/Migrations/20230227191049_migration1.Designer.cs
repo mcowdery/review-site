@@ -11,8 +11,8 @@ using Review_Site.Data;
 namespace Review_Site.Migrations
 {
     [DbContext(typeof(ReviewSiteContext))]
-    [Migration("20230224230737_FirstMigration")]
-    partial class FirstMigration
+    [Migration("20230227191049_migration1")]
+    partial class migration1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

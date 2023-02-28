@@ -6,9 +6,9 @@
 
 <h1>Tour Company Name</h1>
 
-<p>
+@*<p>
     <a asp-action="Create">Create New</a>
-</p>
+</p>*@
 <body>
     @foreach (var item in Model) 
     {
@@ -17,18 +17,39 @@
 
       @*<div class="fill" style="background-image:src(@{Html.Action("Image", item.ImageURL);})">*@
 
-     <div class="row" style="background-image : url('@Url.Content(item.ImageURL.Replace(@"\", "/"))')">
-            <a href="http://www.google.com" class="fill-div"></a>
+        <div class="dest_row" style="background-image : url('@Url.Content(item.ImageURL.Replace(@"\", "/"))')">
+            <a href="https://www.google.com" class="fill-div"></a>
+        <div id="trans-gray-block">
+        <p id="dest_row_tour_country_city">
+        @Html.DisplayFor(modelItem => item.City) | @Html.DisplayFor(modelItem => item.Country)
+        </p>
+        <hr id="dest_row_hr">
+        <p id="dest_row_tour_name">
         @Html.DisplayFor(modelItem => item.Name)
+        </p>
+        <p id="dest_row_tour_description">
         @Html.DisplayFor(modelItem => item.Description)
-        @Html.DisplayFor(modelItem => item.Country)
-        @Html.DisplayFor(modelItem => item.City)
-        @Html.DisplayFor(modelItem => item.TourDuration)
-        @Html.DisplayFor(modelItem => item.Price)
-        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> | 
+        </p>
+
+        <p id="dest_row_tour_duration">
+        Tour Duration: @Html.DisplayFor(modelItem => item.TourDuration) Days
+        </p>
+        <p id="dest_row_tour_price">
+        Price: $@Html.DisplayFor(modelItem => item.Price)
+        </p>
+@*        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> | 
         <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
         <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>|
-        <a asp-action="ReviewsList" asp-route-id="@item.Id">Reviews</a>
+        <a asp-action="ReviewsList" asp-route-id="@item.Id">Reviews</a>*@
+        <p id="dest_row_star_rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <a asp-action="ReviewsList" asp-route-id="@item.Id" id="reviews-id">reviews</a>
+        </p>
+    </div>
         </div>
     }
 </body>

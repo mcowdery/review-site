@@ -18,6 +18,7 @@
       @*<div class="fill" style="background-image:src(@{Html.Action("Image", item.ImageURL);})">*@
 
      <div class="row" style="background-image : url('@Url.Content(item.ImageURL.Replace(@"\", "/"))')">
+            <a href="http://www.google.com" class="fill-div"></a>
         @Html.DisplayFor(modelItem => item.Name)
         @Html.DisplayFor(modelItem => item.Description)
         @Html.DisplayFor(modelItem => item.Country)

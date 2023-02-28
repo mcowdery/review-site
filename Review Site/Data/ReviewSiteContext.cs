@@ -11,7 +11,7 @@ namespace Review_Site.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string connectionString = "Server=(localdb)\\mssqllocaldb;Database=ReviewSite16;Trusted_Connection=True;";
+            string connectionString = "Server=(localdb)\\mssqllocaldb;Database=ReviewSite17;Trusted_Connection=True;";
             optionsBuilder.UseSqlServer(connectionString);
         }
 
@@ -24,7 +24,7 @@ namespace Review_Site.Data
                     Name = "Tour of Tokyo",
                     City = "Tokyo",
                     Country = "Japan",
-                    Description = "Discover Tokyo at your own pace on this 4- or 8-hour private, custom tour with guide. Design a tour that’s perfect for your interests. There’s a world of options, including the outer fish market at Tsukiji, the city’s temples and shrines, shopping excursions and food or sake tours. Your private custom tour includes a guide, entrance fees at select attractions, snacks, round-trip transport from your hotel with meet-and-greet and a car (for the private transfer option), or public transport (for the public transfer) and optional lunch (for the full-day tour).",
+                    Description = "Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens. The city's many museums offer exhibits ranging from classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo Museum).",
                     ImageURL = "\\Images\\Tokyo1.jpg",
                     Price = 8000,
                     TourDuration = 10
@@ -35,7 +35,7 @@ namespace Review_Site.Data
                     Name = "Tour of Rome",
                     City = "Rome",
                     Country = "Italy",
-                    Description= "See famous Colliseum, Spanish Steps, Pantheon, St.Peter's Basilica, Trevi Fountain and much more.",
+                    Description= "Rome was called the “Eternal City” by the ancient Romans because they believed that no matter what happened in the rest of the world, the city of Rome would always remain standing. Exploring the city center by foot surrounded by glorious monuments and colossal remains takes you back in time to the “glory that was Rome”. If you want to see history come to life like never before visit Rome and witness it all aorund you.",
                     Price = 10000,
                     ImageURL = "\\Images\\Rome1.jpg",
                     TourDuration = 7  
@@ -46,7 +46,7 @@ namespace Review_Site.Data
                     Name = "Tour of Paris",
                     City = "Paris",
                     Country = "France",
-                    Description = "See the Eiffel Tower, Louvre Museum, Arc de Triumphe, Notre Dame Cathedral and more",
+                    Description = "Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture. Its 19th-century cityscape is crisscrossed by wide boulevards and the River Seine. Beyond such landmarks as the Eiffel Tower and the 12th-century, Gothic Notre-Dame cathedral, the city is known for its cafe culture and designer boutiques along the Rue du Faubourg Saint-Honoré. ",
                     ImageURL = "\\Images\\Paris1.jpg",
                     Price = 7000,
                     TourDuration = 6
@@ -57,7 +57,7 @@ namespace Review_Site.Data
                     Name = "Tour of Mars",
                     City = "Random Crater",
                     Country = "Sea of Tranquility",
-                    Description = "See what no man in history has seen. Be the first to discover the Red Planet",
+                    Description = "See what no man in history has seen. Be the first to discover the Red Planet. This is a once in a lifetime opportunity.  Travel along with the one and only Elon Musk himself on multibillion dollar spaceship x. Its dangerous, its thrilling, its ridiculous. You can be the first to set your foot and leave human mark on the red planet. Do you have what it takes? Mainly the money? Go and Find out! ",
                     ImageURL = "\\Images\\Mars1.jpg",
                     Price = 7000,
                     TourDuration = 6

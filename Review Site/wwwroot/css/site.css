@@ -8,6 +8,10 @@ html {
     }
 }
 
+.tours_header {
+    color:brown;
+}
+
 html {
     position: relative;
     min-height: 100%;

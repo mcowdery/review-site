@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Review_Site.Data;
 using Review_Site.Models;
@@ -15,12 +16,14 @@ namespace Review_Site.Controllers
         }
         public ActionResult Index()
         {
-            return View(_context.Reviews.ToList());
+            return View(_context.Reviews.Include(r=>r.Destinations).ToList());
         }
 
         public ActionResult Create()
         {
-            return View();
+            var review = new ReviewModel();
+            review.DestinationList = DestList();
+            return View(review);
         }
         [HttpPost]
 
@@ -66,7 +69,9 @@ namespace Review_Site.Controllers
 
         public ActionResult Edit(int id)
         {
-            return View();
+            var review = _context.Reviews.Where(r => r.Id == id).FirstOrDefault();
+            review.DestinationList = DestList();
+            return View(review);
         }
         [HttpPost]
         public ActionResult Edit(int id, ReviewModel review)
@@ -88,6 +93,12 @@ namespace Review_Site.Controllers
             }
             var review = _context.Reviews.Find(id);
             return View(review);
+        }
+        private List<SelectListItem> DestList()
+        {
+            var list = _context.Destinations.ToList();
+            List<SelectListItem> retValue = list.Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() }).ToList();
+            return retValue;
         }
     }
 

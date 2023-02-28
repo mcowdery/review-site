@@ -11,7 +11,7 @@ namespace Review_Site.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string connectionString = "Server=(localdb)\\mssqllocaldb;Database=ReviewSite13;Trusted_Connection=True;";
+            string connectionString = "Server=(localdb)\\mssqllocaldb;Database=ReviewSite16;Trusted_Connection=True;";
             optionsBuilder.UseSqlServer(connectionString);
         }
 
@@ -72,7 +72,7 @@ namespace Review_Site.Data
                    ImageURL = "https://res.taketours.com/images/640/Edinburgh%20Castle-Edinburgh-Scotland-UK.jpg",
                    DateTime = "20140112180244",
                    StarRating = 5,
-                   DestinationId = 1
+                   DestinationsId = 1
                },
                new ReviewModel()
                {
@@ -82,7 +82,7 @@ namespace Review_Site.Data
                    ImageURL = "https://media.timeout.com/images/105240237/750/422/image.jpg",
                    DateTime = "20140112180244",
                    StarRating = 5,
-                   DestinationId = 2
+                   DestinationsId = 2
                });
         }
     }

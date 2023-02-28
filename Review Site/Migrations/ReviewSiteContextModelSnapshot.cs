@@ -123,7 +123,7 @@ namespace Review_Site.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("DestinationId")
+                    b.Property<int>("DestinationsId")
                         .HasColumnType("int");
 
                     b.Property<string>("ImageURL")
@@ -140,7 +140,7 @@ namespace Review_Site.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DestinationId");
+                    b.HasIndex("DestinationsId");
 
                     b.ToTable("Reviews");
 
@@ -150,7 +150,7 @@ namespace Review_Site.Migrations
                             Id = 1,
                             Content = "It's okay",
                             DateTime = "20140112180244",
-                            DestinationId = 1,
+                            DestinationsId = 1,
                             ImageURL = "https://res.taketours.com/images/640/Edinburgh%20Castle-Edinburgh-Scotland-UK.jpg",
                             ReviewerName = "Sergei",
                             StarRating = 5
@@ -160,7 +160,7 @@ namespace Review_Site.Migrations
                             Id = 2,
                             Content = "It's decent",
                             DateTime = "20140112180244",
-                            DestinationId = 2,
+                            DestinationsId = 2,
                             ImageURL = "https://media.timeout.com/images/105240237/750/422/image.jpg",
                             ReviewerName = "Mat",
                             StarRating = 5
@@ -169,13 +169,13 @@ namespace Review_Site.Migrations
 
             modelBuilder.Entity("Review_Site.Models.ReviewModel", b =>
                 {
-                    b.HasOne("Review_Site.Models.DestinationModel", "Destination")
+                    b.HasOne("Review_Site.Models.DestinationModel", "Destinations")
                         .WithMany("Reviews")
-                        .HasForeignKey("DestinationId")
+                        .HasForeignKey("DestinationsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Destination");
+                    b.Navigation("Destinations");
                 });
 
             modelBuilder.Entity("Review_Site.Models.DestinationModel", b =>

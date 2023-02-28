@@ -42,14 +42,14 @@ namespace Review_Site.Migrations
                     ImageURL = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DateTime = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     StarRating = table.Column<int>(type: "int", nullable: false),
-                    DestinationId = table.Column<int>(type: "int", nullable: false)
+                    DestinationsId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Reviews", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Reviews_Destinations_DestinationId",
-                        column: x => x.DestinationId,
+                        name: "FK_Reviews_Destinations_DestinationsId",
+                        column: x => x.DestinationsId,
                         principalTable: "Destinations",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -68,7 +68,7 @@ namespace Review_Site.Migrations
 
             migrationBuilder.InsertData(
                 table: "Reviews",
-                columns: new[] { "Id", "Content", "DateTime", "DestinationId", "ImageURL", "ReviewerName", "StarRating" },
+                columns: new[] { "Id", "Content", "DateTime", "DestinationsId", "ImageURL", "ReviewerName", "StarRating" },
                 values: new object[,]
                 {
                     { 1, "It's okay", "20140112180244", 1, "https://res.taketours.com/images/640/Edinburgh%20Castle-Edinburgh-Scotland-UK.jpg", "Sergei", 5 },
@@ -76,9 +76,9 @@ namespace Review_Site.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Reviews_DestinationId",
+                name: "IX_Reviews_DestinationsId",
                 table: "Reviews",
-                column: "DestinationId");
+                column: "DestinationsId");
         }
 
         /// <inheritdoc />

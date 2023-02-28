@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Security.Policy;
 
 namespace Review_Site.Models
 {
@@ -16,7 +17,7 @@ namespace Review_Site.Models
         public int TourDuration { get; set; }
         public int Price { get; set; }
         public string ImageURL { get; set; }
-        public virtual ICollection<ReviewModel>? Reviews { get; set; }//? menas it can be a null value
+        public virtual IEnumerable<ReviewModel>? Reviews { get; set; }
     }
 }
 

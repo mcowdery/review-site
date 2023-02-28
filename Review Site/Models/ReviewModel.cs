@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Review_Site.Models
@@ -14,9 +15,30 @@ namespace Review_Site.Models
         public string ImageURL { get; set; }
         public string DateTime { get; set; }
         public int StarRating { get; set; }
-        [ForeignKey("DesinationModel")]//telling which modelto use for foreign key
-        public int DestinationId { get; set; }
-        public virtual DestinationModel Destination { get; set; }
+        public virtual DestinationModel? Destinations { get; set; }
+        [NotMapped]
+        public string? NewDestination { get; set; }
+        [ForeignKey(nameof(DestinationModel))]
+        public int DestinationsId { get; set; }
+
+        [NotMapped] //Publisher won't be mapped in the database
+        public string Destination
+        {
+            get
+            {
+                if (Destinations is not null)
+                {
+                    return Destinations.Name;
+                }
+                else
+                {
+                    return string.Empty; //or ""
+                }
+            }
+        }
+
+        [NotMapped]
+        public List<SelectListItem>? DestinationList { get; set; }
 
     }
 }

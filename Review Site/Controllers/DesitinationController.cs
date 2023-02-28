@@ -12,7 +12,7 @@ namespace Review_Site.Controllers
 
         public DestinationController(ReviewSiteContext context)
         {
-            _context = context; 
+            _context = context;
         }
         public ActionResult Index()
         {
@@ -92,24 +92,13 @@ namespace Review_Site.Controllers
             return View(destination);
         }
 
-        //public ActionResult ReviewsList(int id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    var destination = _context.Destinations.Find(id);
-        //    return View(destination);
-
-
-        //        return View(_context.Destinations
-        //            .Include(p => p.Reviews).ToList());
-
-        //    private List<sel> ReviewsList()
-        //    {
-        //        var list = _context.Destinations.ToList();
-        //        List<SelectListItem> retValue = list.Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() }).ToList();
-        //        return retValue;
-        //    }
+        public ActionResult ReviewsList(int Id)
+        {
+            var list = _context.Destinations
+                .Where(b => b.Id == Id)
+                .Include(b => b.Reviews)
+                .FirstOrDefault();
+            return View(list);
         }
+    }
 }

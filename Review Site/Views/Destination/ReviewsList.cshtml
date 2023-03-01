@@ -4,7 +4,7 @@
     ViewData["Title"] = "ReviewsList";
 }
 <body id="tokyo_review_body">
-    <h1 id="tokyo_review_page_title">TOKYO TOUR REVIEWS</h1>
+    <h1 id="tokyo_review_page_title">REVIEWS</h1>
 
 
     <div id="tokyo_review_info_block">
@@ -23,7 +23,10 @@
                 @r.Timestamp
             </p>
             <p id="review_content">
-                @r.Content
+            "@r.Content"
+            </p>
+            <p id="review_name">
+            - @r.ReviewerName
             </p>
             <p>
                 @r.StarRating

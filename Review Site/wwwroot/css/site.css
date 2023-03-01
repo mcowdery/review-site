@@ -19,7 +19,12 @@ html {
 
 body {
     margin-bottom: 60px;
-    background-color:lightgray
+    background-color:lightslategray
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
 }
 
 .dest_row {
@@ -90,11 +95,13 @@ body {
 #dest_row_star_rating {
     text-align: center;
 }
-#reviews-id {
-    color:white;
+#Navbar_Title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: cadetblue;
 }
-
-
-
-
-
+#destination_tours_list-header {
+    font-family:Arial, Helvetica, sans-serif;
+    color:ghostwhite;
+    font-size: 30px;
+}

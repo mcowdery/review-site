@@ -3,18 +3,22 @@
 
 // Write your JavaScript code.
 
-    var background = document.getElementById("background");
-    var currentPos = 0;
-    var images = ["https://localhost:7186/Images/Tokyo1.jpg", "https://media.wired.com/photos/5cdefb92b86e041493d389df/1:1/w_988,h_988,c_limit/Culture-Grumpy-Cat-487386121.jpg", "https://localhost:7186/Images/Tokyo1.jpg", "https://media.wired.com/photos/5cdefb92b86e041493d389df/1:1/w_988,h_988,c_limit/Culture-Grumpy-Cat-487386121.jpg"], i = 0;
+const ratingStars = [...document.getElementsByClassName("rating__star")];
 
-    function changeimage()
-    {
-        if (++currentPos >= images.length)
-    currentPos = 0;
 
-    background.style.backgroundImage = "url(" + images[currentPos] + ")";
-    }
-setInterval(changeimage, 3000);
+
+//    var background = document.getElementById("background");
+//    var currentPos = 0;
+//    var images = ["https://localhost:7186/Images/Tokyo1.jpg", "https://media.wired.com/photos/5cdefb92b86e041493d389df/1:1/w_988,h_988,c_limit/Culture-Grumpy-Cat-487386121.jpg", "https://localhost:7186/Images/Tokyo1.jpg", "https://media.wired.com/photos/5cdefb92b86e041493d389df/1:1/w_988,h_988,c_limit/Culture-Grumpy-Cat-487386121.jpg"], i = 0;
+
+//    function changeimage()
+//    {
+//        if (++currentPos >= images.length)
+//    currentPos = 0;
+
+//    background.style.backgroundImage = "url(" + images[currentPos] + ")";
+//    }
+//setInterval(changeimage, 3000);
 
 //var textLength = $('#dest_row_tour_description_1').text().length
 //document.getElementById("dest_row_tour_price_1").innerHTML = textLength;

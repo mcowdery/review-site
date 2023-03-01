@@ -59,8 +59,8 @@ namespace Review_Site.Data
                     Country = "Sea of Tranquility",
                     Description = "See what no man in history has seen. Be the first to discover the Red Planet. This is a once in a lifetime opportunity.  Travel along with the one and only Elon Musk himself on multibillion dollar spaceship x. Its dangerous, its thrilling, its ridiculous. You can be the first to set your foot and leave human mark on the red planet. Do you have what it takes? Mainly the money? Go and Find out! ",
                     ImageURL = "\\Images\\Mars1.jpg",
-                    Price = 7000,
-                    TourDuration = 6
+                    Price = 1000000,
+                    TourDuration = 2156
                 });
 
             modelBuilder.Entity<ReviewModel>().HasData(

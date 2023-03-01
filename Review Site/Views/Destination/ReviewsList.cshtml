@@ -3,37 +3,26 @@
 @{
     ViewData["Title"] = "ReviewsList";
 }
+<body id="tokyo_review_body">
+    <h1 id="tokyo_review_page_title">TOKYO TOUR REVIEWS</h1>
 
-<h1>ReviewsList</h1>
 
-<div>
-    <h4>Tokyo Tour Reviews</h4>
+    <div id="tokyo_review_info_block">
 
-    <p id="rev"
+        @foreach(var r in Model.Reviews)
+        {
+        <hr id="dest_row_hr">
 
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-@*        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ImageURL)
-        </dt>*@
-@*        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ImageURL)
-        </dd>*@
-    </dl>
-</p>
-<div>
-    <ul>
-    @foreach(var r in Model.Reviews)
-    {
-        <li>
+            <p id="review_image">
             @r.ImageURL
+            </p>
+            <p id="review_name">
             @r.ReviewerName
+            </p> 
+            <p id="review_datetime"> 
             @r.DateTime
+            </p>
+            <p id="review_content">
             @r.Content
             @r.StarRating
         </li>
@@ -68,37 +57,4 @@
 
 
 
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ImageURL)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.ImageURL)
-        </dd>
-    </dl>
-</div>
-<div>
-    <ul>
-        @foreach (var r in Model.Reviews)
-        {
-            <li>
-                @r.ReviewerName
-                @r.DateTime
-                @r.Content
-                @r.StarRating
-            </li>
-        }
-    </ul>
 
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
-*@

@@ -1,0 +1,46 @@
+﻿
+#tokyo_review_info_block {
+    font-size: 20px;
+    text-align: center;
+    background: rgba(59, 64, 37, 0.50);
+    padding: 10px;
+}
+
+#tokyo_review_page_title {
+    font-size: 20px;
+    text-align: center
+}
+#dest_row_hr {
+    color: white;
+    height: 0.9px;
+    opacity: 1;
+    margin: 10px;
+}
+#tokyo_review_page_footer {
+    font-size: 15px;
+    text-align: center;
+    padding: 20px
+}
+#tokyo_review_body {
+    background-image: url(../Images/TokyoLarge.jpg)
+}
+
+
+#review_image {
+    color:white;
+}
+#review_name {
+    color: white;
+}
+#review_datetime {
+    color: white;
+}
+#review_content {
+    color: white;
+    
+    text-align:center;
+
+}
+#review_rating {
+    color: white;
+}

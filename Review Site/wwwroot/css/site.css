@@ -48,10 +48,14 @@ body {
     width: 35%;
     height: 0;
     padding-bottom: 35%;
-    background: rgba(59, 64, 37, 0.50)
+    background: rgba(59, 64, 37, 0.50);
+    position: relative;
+/*    display: flex;
+    flex-direction: column;*/
+    /*justify-content: flex-end;*/
 }
 
-#dest_row_tour_country_city {
+.dest_row_tour_country_city {
     font-size: 21px;
     color: white;
     text-transform: uppercase;
@@ -60,31 +64,44 @@ body {
     margin: 10px;
     /*    font-family:"hind guntur"*/
 }
-#dest_row_hr {
+.dest_row_hr {
     color: white;
     height: 0.9px;
     opacity:1;
     margin:10px;
 }
 
-#dest_row_tour_name {
+.dest_row_tour_name {
     font-size: 15px;
     color: white;
     text-align: center;
 }
 
-#dest_row_tour_description {
+.dest_row_tour_description {
     font-size: 14px;
     color: white;
     text-align: center;
-    margin:20px;
+    margin: 20px;
+
 }
-#dest_row_tour_duration {
+#description_block {
+    width: 100%;
+    overflow: clip;
+}
+#lower_block {
+    text-overflow: ellipsis;
+    overflow: clip;
+
+    position: absolute;
+    bottom:0;
+    width:100%;
+}
+.dest_row_tour_duration {
     font-size: 18px;
     color: white;
     text-align: center;
 }
-#dest_row_tour_price {
+.dest_row_tour_price {
     font-size: 18px;
     color: white;
     text-align: center;
@@ -92,7 +109,7 @@ body {
 .checked {
     color: orange;
 }
-#dest_row_star_rating {
+.dest_row_star_rating {
     text-align: center;
 }
 #Navbar_Title {
@@ -105,3 +122,6 @@ body {
     color:ghostwhite;
     font-size: 30px;
 }
+
+
+

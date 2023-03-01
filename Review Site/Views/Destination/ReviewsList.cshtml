@@ -3,90 +3,41 @@
 @{
     ViewData["Title"] = "ReviewsList";
 }
-
-<h1>ReviewsList</h1>
-
-<div>
-    <h4>Tokyo Tour Reviews</h4>
-
-    <p id="rev"
-
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-@*        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ImageURL)
-        </dt>*@
-@*        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ImageURL)
-        </dd>*@
-    </dl>
-</p>
-<div>
-    <ul>
-    @foreach(var r in Model.Reviews)
-    {
-        <li>
-            @r.ImageURL
-            @r.ReviewerName
-            @r.DateTime
-            @r.Content
-            @r.StarRating
-        </li>
-    }
-    </ul>
-   
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+<body id="tokyo_review_body">
+    <h1 id="tokyo_review_page_title">TOKYO TOUR REVIEWS</h1>
 
 
+    <div id="tokyo_review_info_block">
 
-
-
-@*
-<div>
-    <h4>Tokyo Tour Reviews</h4>
-
-
-
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ImageURL)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.ImageURL)
-        </dd>
-    </dl>
-</div>
-<div>
-    <ul>
-        @foreach (var r in Model.Reviews)
+        @foreach(var r in Model.Reviews)
         {
-            <li>
-                @r.ReviewerName
-                @r.DateTime
-                @r.Content
-                @r.StarRating
-            </li>
-        }
-    </ul>
+        <hr id="dest_row_hr">
 
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
-*@
+            <p id="review_image">
+            @r.ImageURL
+            </p>
+            <p id="review_name">
+            @r.ReviewerName
+            </p> 
+            <p id="review_datetime"> 
+            @r.DateTime
+            </p>
+            <p id="review_content">
+            @r.Content
+            </p>
+            <p id="review_rating">
+            @r.StarRating  
+            </p> 
+            
+        }
+            
+    </div>
+
+    <div id="tokyo_review_page_footer">
+        <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+</body>
+
+
+

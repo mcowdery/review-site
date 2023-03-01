@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Security.Policy;
 
@@ -18,6 +19,8 @@ namespace Review_Site.Models
         public int Price { get; set; }
         public string ImageURL { get; set; }
         public virtual IEnumerable<ReviewModel>? Reviews { get; set; }
+        [NotMapped]
+        public List<SelectListItem>? DestinationList { get; set; }
     }
 }
 

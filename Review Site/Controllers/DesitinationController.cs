@@ -100,5 +100,29 @@ namespace Review_Site.Controllers
                 .FirstOrDefault();
             return View(list);
         }
+        public ActionResult AddReview(int id)
+        {
+            var review = new ReviewModel();
+            review.DestinationList = DestList();
+            review.DestinationsId = id;
+            return View(review);
+        }
+        public ActionResult AddReview(ReviewModel reviews, int id)
+        {
+            reviews = _context.Reviews.Where(r => r.Id == id).FirstOrDefault();
+            if (ModelState.IsValid)
+            {
+                _context.Reviews.Add(reviews);
+                _context.SaveChanges();
+                return RedirectToAction("ReviewsList");
+            }
+            return View(reviews);
+        }
+        private List<SelectListItem> DestList()
+        {
+            var list = _context.Destinations.ToList();
+            List<SelectListItem> retValue = list.Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() }).ToList();
+            return retValue;
+        }
     }
 }

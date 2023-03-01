@@ -18,7 +18,6 @@ namespace Review_Site.Controllers
         {
             return View(_context.Reviews.Include(r=>r.Destinations).ToList());
         }
-
         public ActionResult Create()
         {
             var review = new ReviewModel();
@@ -26,7 +25,6 @@ namespace Review_Site.Controllers
             return View(review);
         }
         [HttpPost]
-
         public ActionResult Create(ReviewModel reviews)
         {
             if (ModelState.IsValid)
@@ -94,12 +92,12 @@ namespace Review_Site.Controllers
             var review = _context.Reviews.Find(id);
             return View(review);
         }
-        private List<SelectListItem> DestList()
+        public List<SelectListItem> DestList()
         {
             var list = _context.Destinations.ToList();
             List<SelectListItem> retValue = list.Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() }).ToList();
             return retValue;
         }
-    }
+    } 
 
 }

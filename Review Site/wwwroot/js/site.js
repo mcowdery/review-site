@@ -3,8 +3,11 @@
 
 // Write your JavaScript code.
 
-const ratingStars = [...document.getElementsByClassName("rating__star")];
-
+var average = items.Reviews.Average(i => i.Rating);
+var floorplanSettings = @Html.Raw(Json.Encode(Model.Reviews));
+var userObj = @Html.Raw(Json.Encode(Model));
+var userJsonObj = '@Html.Raw(Json.Encode(Model))';
+document.getElementById("dest_row_tour_price_1").innerHTML = average;
 
 
 //    var background = document.getElementById("background");

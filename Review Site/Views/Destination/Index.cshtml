@@ -12,8 +12,8 @@
 <body>
     @foreach (var item in Model) 
     {
-            @*<div style="background-image: url(https://helios-i.mashable.com/imagery/articles/01neFU0eWtDpwBEe1WhOQqM/hero-image.fill.size_1200x1200.v1623385029.jpg)">*@
-  @*      <div style = "background-image: @item.ImageURL;">*@
+     @*<div style="background-image: url(https://helios-i.mashable.com/imagery/articles/01neFU0eWtDpwBEe1WhOQqM/hero-image.fill.size_1200x1200.v1623385029.jpg)">*@
+       @*<div style = "background-image: @item.ImageURL;">*@
 
       @*<div class="fill" style="background-image:src(@{Html.Action("Image", item.ImageURL);})">*@
 
@@ -48,7 +48,7 @@
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star"></span>
                     <span class="fa fa-star"></span>
-                    <a asp-action="ReviewsList" asp-route-id="@item.Id" id="reviews_id">reviews</a>
+                    <a asp-action="ReviewsList" asp-route-id="@item.Id" id="reviews_id">@item.Reviews.Count() reviews</a>
                 </p>
                 </div>
             </div>

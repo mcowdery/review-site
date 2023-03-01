@@ -103,18 +103,19 @@ namespace Review_Site.Controllers
         public ActionResult AddReview(int id)
         {
             var review = new ReviewModel();
-            review.DestinationList = DestList();
             review.DestinationsId = id;
             return View(review);
         }
-        public ActionResult AddReview(ReviewModel reviews, int id)
+        [HttpPost]
+        public ActionResult AddReview(ReviewModel reviews)
         {
-            reviews = _context.Reviews.Where(r => r.Id == id).FirstOrDefault();
             if (ModelState.IsValid)
             {
+                reviews.DestinationsId = reviews.Id;
+                reviews.Id = 0;
                 _context.Reviews.Add(reviews);
                 _context.SaveChanges();
-                return RedirectToAction("ReviewsList");
+                return RedirectToAction("ReviewsList", new { id = reviews.DestinationsId });
             }
             return View(reviews);
         }

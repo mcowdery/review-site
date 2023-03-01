@@ -14,25 +14,26 @@
         <hr id="dest_row_hr">
 
             <p id="review_image">
-            @r.ImageURL
+                @r.ImageURL
             </p>
             <p id="review_name">
-            @r.ReviewerName
+                @r.ReviewerName
             </p> 
             <p id="review_datetime"> 
-            @r.DateTime
+                @r.Timestamp
             </p>
             <p id="review_content">
-            @r.Content
-            @r.StarRating
-        </li>
-    }
-    </ul>
+                @r.Content
+            </p>
+            <p>
+                @r.StarRating
+            </p>
+        }
    
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="AddReview">Add Review</a> |
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="AddReview" asp-route-id="@Model.Id">Add Review</a> |
     <a asp-action="Index">Back to List</a>
 </div>
 
@@ -48,12 +49,7 @@
         <input id="rating5" type="radio" name="rating" value="5">
         <label for="rating5">5</label>
     </div>
-
-
-
-@*
-<div>
-    <h4>Tokyo Tour Reviews</h4>
+<</body>/>
 
 
 

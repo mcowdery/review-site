@@ -13,7 +13,7 @@ namespace Review_Site.Models
         public string ReviewerName { get; set; }
         public string Content { get; set; }
         public string ImageURL { get; set; }
-        public string DateTime { get; set; }
+        public DateTime Timestamp { get; set; } = DateTime.Now;
         public int StarRating { get; set; }
         public virtual DestinationModel? Destinations { get; set; }
         [NotMapped]

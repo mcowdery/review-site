@@ -2,7 +2,7 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
-/*<script type="text/javascript">*/
+
     var background = document.getElementById("background");
     var currentPos = 0;
     var images = ["https://localhost:7186/Images/Tokyo1.jpg", "https://media.wired.com/photos/5cdefb92b86e041493d389df/1:1/w_988,h_988,c_limit/Culture-Grumpy-Cat-487386121.jpg", "https://localhost:7186/Images/Tokyo1.jpg", "https://media.wired.com/photos/5cdefb92b86e041493d389df/1:1/w_988,h_988,c_limit/Culture-Grumpy-Cat-487386121.jpg"], i = 0;
@@ -14,5 +14,26 @@
 
     background.style.backgroundImage = "url(" + images[currentPos] + ")";
     }
-    setInterval(changeimage, 3000);
-{/*</script>*/}
+setInterval(changeimage, 3000);
+
+//var textLength = $('#dest_row_tour_description_1').text().length
+//document.getElementById("dest_row_tour_price_1").innerHTML = textLength;
+
+//var dest_count = document.querySelectorAll('.dest_row_tour_price').length;
+//document.getElementById("dest_row_tour_duration_1").innerHTML = dest_count;
+//const matches = element.getElementByClassName();
+//matches.
+    //for (i = 1; i < dest_count+1; i++)
+    //{
+    //    textLength = $('#dest_row_tour_description_' + i).text().length;
+    //    document.getElementById("dest_row_tour_price_" + i).innerHTML = textLength;
+    //    if (textLength > 300)
+    //    {
+    //        document.getElementById("dest_row_tour_description_" + i).innerHTML = document.getElementById("dest_row_tour_description_" + i).innerHTML.slice(0, 300);
+    //    }
+    //}
+//if ($('#dest_row_tour_description_1')[0].scrollWidth > $('#dest_row_tour_description_1').innerWidth()) {
+//    document.getElementById("dest_row_tour_description_1").innerHTML += "...";
+/*}*/
+
+

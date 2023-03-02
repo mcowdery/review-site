@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Review_Site.Migrations
 {
     /// <inheritdoc />
-    public partial class migration1 : Migration
+    public partial class addmigration1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

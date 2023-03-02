@@ -119,11 +119,5 @@ namespace Review_Site.Controllers
             }
             return View(reviews);
         }
-        private List<SelectListItem> DestList()
-        {
-            var list = _context.Destinations.ToList();
-            List<SelectListItem> retValue = list.Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() }).ToList();
-            return retValue;
-        }
     }
 }

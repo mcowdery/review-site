@@ -26,7 +26,8 @@
     padding: 20px
 }
 #tokyo_review_body {
-    background-image: url(../Images/TokyoLarge.jpg)
+    background-image: url(../Images/TokyoLarge.jpg);
+    background-attachment: fixed;
 }
 
 

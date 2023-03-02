@@ -27,10 +27,22 @@
                 <input asp-for="ImageURL" class="form-control" />
                 <span asp-validation-for="ImageURL" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="StarRating" class="control-label"></label>
-                <input asp-for="StarRating" class="form-control" />
+                <input asp-for="StarRating" class="form" />
                 <span asp-validation-for="StarRating" class="text-danger"></span>
+            </div>*@
+            <div class="rating form-group">
+                <input asp-for="StarRating" id="rating1" type="radio" name="rating" value="1" class="form" />
+                <label asp-for="StarRating" for="rating1" class="control-label">1</label>
+                <input asp-for="StarRating" id="rating2" type="radio" name="rating" value="2" class="form" />
+                <label asp-for="StarRating" for="rating2" class="control-label">2</label>
+                <input asp-for="StarRating" id="rating3" type="radio" name="rating" value="3" class="form" />
+                <label asp-for="StarRating" for="rating3" class="control-label">3</label>
+                <input asp-for="StarRating" id="rating4" type="radio" name="rating" value="4" class="form" />
+                <label asp-for="StarRating" for="rating4" class="control-label">4</label>
+                <input asp-for="StarRating" id="rating5" type="radio" name="rating" value="5" class="form" />
+                <label asp-for="StarRating" for="rating5" class="control-label">5</label>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -39,7 +51,7 @@
     </div>
 </div>
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="ReviewsList" asp-route-id="@Model.DestinationsId">Back to List</a>
 </div>
 
 @section Scripts {

@@ -68,8 +68,8 @@ namespace Review_Site.Data
                {
                    Id = 1,
                    Content = "It's okay",
-                   ReviewerName = "Sergei",
-                   ImageURL = "https://res.taketours.com/images/640/Edinburgh%20Castle-Edinburgh-Scotland-UK.jpg",
+                   ReviewerName = "Kate Johnson",
+                   ImageURL = "\\Images\\Kate.png",
                    Timestamp = DateTime.ParseExact("2002-09-01", "yyyy-MM-dd", null),
                    StarRating = "5",
                    DestinationsId = 1
@@ -78,8 +78,8 @@ namespace Review_Site.Data
                {
                    Id = 2,
                    Content = "It's decent",
-                   ReviewerName = "Mat",
-                   ImageURL = "https://media.timeout.com/images/105240237/750/422/image.jpg",
+                   ReviewerName = "James Olson",
+                   ImageURL = "\\Images\\James.png",
                    Timestamp = DateTime.ParseExact("2002-09-01", "yyyy-MM-dd", null),
                    StarRating = "5",
                    DestinationsId = 2

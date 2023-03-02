@@ -45,11 +45,11 @@ namespace Review_Site.Models
         {
             get{ 
                 var arr = new double[] { };
-                foreach (char r in StarRating)
-                {
-                    arr.Append(Convert.ToDouble(r));
-                }
-                return Convert.ToInt32(Queryable.Average(arr.AsQueryable())).ToString();
+                //foreach (string r in StarRating)
+                //{
+                //    arr.Append(Convert.ToDouble(r));
+                //}
+                //return Convert.ToInt32(Queryable.Average(arr.AsQueryable())).ToString();
             }
         }
 

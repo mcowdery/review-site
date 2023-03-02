@@ -12,7 +12,7 @@ using Review_Site.Data;
 namespace Review_Site.Migrations
 {
     [DbContext(typeof(ReviewSiteContext))]
-    [Migration("20230301234245_migration1")]
+    [Migration("20230302004627_migration1")]
     partial class migration1
     {
         /// <inheritdoc />
@@ -135,8 +135,9 @@ namespace Review_Site.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<int>("StarRating")
-                        .HasColumnType("int");
+                    b.Property<string>("StarRating")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Timestamp")
                         .HasColumnType("datetime2");
@@ -155,7 +156,7 @@ namespace Review_Site.Migrations
                             DestinationsId = 1,
                             ImageURL = "https://res.taketours.com/images/640/Edinburgh%20Castle-Edinburgh-Scotland-UK.jpg",
                             ReviewerName = "Sergei",
-                            StarRating = 5,
+                            StarRating = "5",
                             Timestamp = new DateTime(2002, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -165,7 +166,7 @@ namespace Review_Site.Migrations
                             DestinationsId = 2,
                             ImageURL = "https://media.timeout.com/images/105240237/750/422/image.jpg",
                             ReviewerName = "Mat",
-                            StarRating = 5,
+                            StarRating = "5",
                             Timestamp = new DateTime(2002, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });

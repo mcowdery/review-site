@@ -6,6 +6,12 @@
 <body id="tokyo_review_body">
     <h1 id="tokyo_review_page_title">REVIEWS</h1>
 
+    <div id="review_link_buttons">
+        <a id="button" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+        <a id="button" asp-action="AddReview" asp-route-id="@Model.Id">Add Review</a> |
+        <a id="button" asp-action="Index">Back to List</a>
+    </div>
+
 
     <div id="tokyo_review_info_block">
 
@@ -14,19 +20,16 @@
         <hr id="dest_row_hr">
 
             <p id="review_image">
-                @r.ImageURL
+                <img class="review_image" src="@r.ImageURL">
             </p>
-            <p id="review_name">
-                @r.ReviewerName
-            </p> 
-            @*<p id="review_datetime"> 
+           @* <p id="review_datetime"> 
                 @r.Timestamp
             </p>*@
             <p id="review_content">
             "@r.Content"
             </p>
             <p id="review_name">
-            - @r.ReviewerName
+             @r.ReviewerName
             </p>
             <p>
                 @r.StarRating
@@ -34,11 +37,7 @@
         }
    
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="AddReview" asp-route-id="@Model.Id">Add Review</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 <</body>/>
 

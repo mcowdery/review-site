@@ -41,17 +41,17 @@ namespace Review_Site.Models
         public List<SelectListItem>? DestinationList { get; set; }
 
 
-        public string GetReviewAverage
-        {
-            get{ 
-                var arr = new double[] { };
-                //foreach (string r in StarRating)
-                //{
-                //    arr.Append(Convert.ToDouble(r));
-                //}
-                //return Convert.ToInt32(Queryable.Average(arr.AsQueryable())).ToString();
-            }
-        }
+        //public string GetReviewAverage
+        //{
+        //    get{ 
+        //        var arr = new double[] { };
+        //        //foreach (string r in StarRating)
+        //        //{
+        //        //    arr.Append(Convert.ToDouble(r));
+        //        //}
+        //        //return Convert.ToInt32(Queryable.Average(arr.AsQueryable())).ToString();
+        //    }
+        //}
 
     }
 }

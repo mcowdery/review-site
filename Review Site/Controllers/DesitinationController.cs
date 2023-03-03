@@ -68,7 +68,9 @@ namespace Review_Site.Controllers
 
         public ActionResult Edit(int id)
         {
-            return View();
+            var destination = _context.Destinations.Where(r => r.Id == id).FirstOrDefault();
+            destination.Id = id;
+            return View(destination);
         }
         [HttpPost]
         public ActionResult Edit(int id, DestinationModel destination)
@@ -80,6 +82,24 @@ namespace Review_Site.Controllers
                 return RedirectToAction("Index");
             }
             return View(destination);
+        }
+        public ActionResult ReviewListEdit(int id)
+        {
+            var review = _context.Reviews.Where(r => r.Id == id).FirstOrDefault();
+            review.DestinationsId = id;
+            return View(review);
+        }
+        [HttpPost]
+        public ActionResult ReviewListEdit(int id, ReviewModel review)
+        {
+            if (ModelState.IsValid)
+            {
+                review.DestinationsId = review.Id;
+                _context.Entry(review).State = EntityState.Modified;
+                _context.SaveChanges();
+                return RedirectToAction("ReviewsList", new { id = review.DestinationsId });
+            }
+            return View(review);
         }
 
         public ActionResult Details(int id)

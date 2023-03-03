@@ -3,9 +3,11 @@
 @{
     ViewData["Title"] = "Index";
 }
-
+<div id="add_dest_button_container">
+<a class="invisible_element" asp-action="Create">Add a destination</a>
 <h2 id="destination_tours_list-header">AVAILABLE TOURS</h2>
-
+<a id="add_dest_button" asp-action="Create">Add a destination</a>
+</div>
 @*<p>
     <a asp-action="Create">Create New</a>
 </p>*@

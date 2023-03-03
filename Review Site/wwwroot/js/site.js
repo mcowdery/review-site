@@ -3,11 +3,35 @@
 
 // Write your JavaScript code.
 
-var average = items.Reviews.Average(i => i.Rating);
-var floorplanSettings = @Html.Raw(Json.Encode(Model.Reviews));
-var userObj = @Html.Raw(Json.Encode(Model));
-var userJsonObj = '@Html.Raw(Json.Encode(Model))';
-document.getElementById("dest_row_tour_price_1").innerHTML = average;
+function hideLink() {
+    var x = document.getElementById("all_reviews_button");
+    var y = document.getElementsByClassName("delete_buttons");
+    var z = document.getElementsByClassName("edit_buttons");
+
+    if (x.style.display === "none") {
+        x.style.display = "inline-flex";
+        Array.prototype.forEach.call(y, function (el) {
+            el.style.display = "inline-flex";
+        });
+        Array.prototype.forEach.call(z, function (el) {
+            el.style.display = "inline-flex";
+        });
+    } else {
+        x.style.display = "none";
+        Array.prototype.forEach.call(y, function (el) {
+            el.style.display = "none";
+        });
+        Array.prototype.forEach.call(z, function (el) {
+            el.style.display = "none";
+        });
+    }
+}
+
+//var average = items.Reviews.Average(i => i.Rating);
+//var floorplanSettings = @Html.Raw(Json.Encode(Model.Reviews));
+//var userObj = @Html.Raw(Json.Encode(Model));
+//var userJsonObj = '@Html.Raw(Json.Encode(Model))';
+//document.getElementById("dest_row_tour_price_1").innerHTML = average;
 
 
 //    var background = document.getElementById("background");

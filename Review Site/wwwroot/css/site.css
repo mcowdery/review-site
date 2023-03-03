@@ -28,6 +28,8 @@ body {
 }
 
 .dest_row {
+    display:inline-flex;
+    justify-content:space-between;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -35,8 +37,44 @@ body {
     padding-bottom: 35%;
     margin: 0px;
     padding-top: 0px;
+    flex-wrap:wrap;
+    --gap:20px;
+}
+.dest_row_delete_edit_buttons {
+    display: grid;
+    align-content: end;
+}
+.delete_buttons {
+    display:none;
+/*    display: inline-flex;*/
+    justify-content: center;
+    border: 2px solid white;
+    background-color: rgba(59, 64, 37, 0.20);
+    padding: 5px 40px;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: Verdana;
+    vertical-align: middle;
+    text-decoration: none;
+    margin: 10px;
 }
 
+.edit_buttons {
+    display: none;
+/*    display: inline-flex;*/
+    justify-content: center;
+    margin: 10px;
+    border: 2px solid white;
+    background-color: rgba(59, 64, 37, 0.20);
+    padding: 5px 40px;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: Verdana;
+    vertical-align: middle;
+    text-decoration: none;
+}
 /*a.fill-div {
     display: block;
     height: 100%;
@@ -139,7 +177,25 @@ body {
     text-decoration: none;
 }
 
+#all_reviews_button {
+    color:black;
+/*    margin-left:auto;*/
+/*    transform:translateX(1500%);*/
+/*    text-align:center*/
+}
+#admin_mode_button {
+    color: black;
+/*    margin-left: auto;*/
+    /*    transform:translateX(1500%);*/
+/*    text-align: center*/
+}
 #reviews_id {
+    color:white;
+}
+a {
+    color:white;
+}
+footer .container {
     color:white;
 }
 

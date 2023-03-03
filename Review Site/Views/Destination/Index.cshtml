@@ -38,10 +38,9 @@
                 <p id="dest_row_tour_price_@item.Id" class="dest_row_tour_price">
                     Price: $@Html.DisplayFor(modelItem => item.Price)
                 </p>
-                @*<a id="details_button" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |*@
+
                 <a id="details_button" asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                @*<a id="details_button" asp-action="Delete" asp-route-id="@item.Id">Delete</a>|
-                <a id="details_button" asp-action="ReviewsList" asp-route-id="@item.Id">Reviews</a>*@
+
                 <p id="dest_row_star_rating_@item.Id" class="dest_row_star_rating">
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
@@ -50,10 +49,9 @@
                     <span class="fa fa-star"></span>
                     <a asp-action="ReviewsList" asp-route-id="@item.Id" id="reviews_id">@item.Reviews.Count() reviews</a>
                 </p>
-@*
 
                     <p id="dest_row_star_rating_@item.Id" class="dest_row_star_rating">
-                        @{
+@*                        @{
                             var k = new ReviewModel();
                             var reviewAverage = k.GetReviewAverage;
 
@@ -95,10 +93,15 @@
                                     <span class="fa fa-star checked"></span>
                                     break;
                             }
-                        }
-                    </p>*@
+                        }*@
+                    </p>
                 </div>
             </div>
+            <div class="dest_row_delete_edit_buttons">
+            <a class="delete_buttons" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            <a class="edit_buttons" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+            </div>
+
         </div>
     }
 </body>

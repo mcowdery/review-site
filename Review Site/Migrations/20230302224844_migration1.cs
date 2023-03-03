@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Review_Site.Migrations
 {
     /// <inheritdoc />
-    public partial class addmigration1 : Migration
+    public partial class migration1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -72,8 +72,8 @@ namespace Review_Site.Migrations
                 columns: new[] { "Id", "Content", "DestinationsId", "ImageURL", "ReviewerName", "StarRating", "Timestamp" },
                 values: new object[,]
                 {
-                    { 1, "It's okay", 1, "https://res.taketours.com/images/640/Edinburgh%20Castle-Edinburgh-Scotland-UK.jpg", "Sergei", "5", new DateTime(2002, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 2, "It's decent", 2, "https://media.timeout.com/images/105240237/750/422/image.jpg", "Mat", "5", new DateTime(2002, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
+                    { 1, "It's okay", 1, "\\Images\\Kate.png", "Kate Johnson", "5", new DateTime(2002, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 2, "It's decent", 2, "\\Images\\James.png", "James Olson", "5", new DateTime(2002, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
                 });
 
             migrationBuilder.CreateIndex(

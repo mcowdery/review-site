@@ -11,7 +11,7 @@ namespace Review_Site.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string connectionString = "Server=(localdb)\\mssqllocaldb;Database=ReviewSite24;Trusted_Connection=True;";
+            string connectionString = "Server=(localdb)\\mssqllocaldb;Database=ReviewSite27;Trusted_Connection=True;";
             optionsBuilder.UseSqlServer(connectionString);
         }
 

@@ -44,6 +44,7 @@ body {
     display: grid;
     align-content: end;
 }
+
 .delete_buttons {
     display:none;
 /*    display: inline-flex;*/
@@ -74,6 +75,47 @@ body {
     font-family: Verdana;
     vertical-align: middle;
     text-decoration: none;
+}
+#add_dest_button_container {
+    display: flex;
+    justify-content:space-between;
+}
+.invisible_element {
+    visibility:hidden;
+    display: inline-flex;
+    justify-content: end;
+    border: 2px solid white;
+    background-color: rgba(59, 64, 37, 0.20);
+    padding: 5px 40px;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: Verdana;
+    vertical-align: middle;
+    text-decoration: none;
+    margin: 10px;
+}
+#add_dest_button {
+    visibility: hidden;
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid white;
+    background-color: rgba(59, 64, 37, 0.20);
+    padding: 5px 40px;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: Verdana;
+    vertical-align: middle;
+    text-decoration: none;
+    margin: 10px;
+}
+#destination_tours_list-header {
+    font-size: 35px;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
 }
 /*a.fill-div {
     display: block;
@@ -155,13 +197,7 @@ body {
     font-size: 50px;
     color: cadetblue;
 }
-#destination_tours_list-header {
-    font-size: 35px;
-    text-align: center;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 10px;
-}
+
 
 #details_button {
     display: flex;

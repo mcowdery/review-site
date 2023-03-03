@@ -7,8 +7,7 @@
         <h1 id="tokyo_review_page_title">REVIEWS</h1>
 
         <div id="review_link_buttons">
-            <a id="button" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-            <a id="button" asp-action="AddReview" asp-route-id="@Model.Id">Add Review</a> |
+            <a id="button" asp-action="AddReview" asp-route-id="@Model.Id">Add Review</a>
             <a id="button" asp-action="Index">Back to List</a>
         </div>
 
@@ -71,6 +70,7 @@
                             break;
                     }
                 </p>
+            <a id="button" asp-action="ReviewListEdit" asp-route-id="@r.DestinationsId">Edit</a>
             }
    
     </div>

@@ -56,15 +56,36 @@
                 $@Html.DisplayFor(model => model.Price) USD
         </div>
 
-        <div id="details_tourgallery">               
-            <img id="gallery_image" src="@Model.ImageList.Split(",")[0]">
+        <div id="details_tourgallery"> 
+            @{
+                //int count=0;
+                //foreach (var ch in @Model.ImageList){
+                //    if(ch == ',') { count++; }
+                //}
+                //for (int i = 0; i <= count; i++)
+                //{
+                //    <img id="gallery_image" src="@Model.ImageList.Split(",")[i]">
+                //}
+                int count = 0;
+                <img id="gallery_image" src="@Model.ImageList.Split(",")[0]">
+                foreach (var ch in @Model.ImageList)
+                {
+                    if (ch == ',')
+                    {
+                        count++;
+                        <img id="gallery_image" src="@Model.ImageList.Split(",")[count]">
+                    }
+                }
+                count = 0;//reset
+            }
+@*            <img id="gallery_image" src="@Model.ImageList.Split(",")[0]">
             <img id="gallery_image" src="@Model.ImageList.Split(",")[1]">
             <img id="gallery_image" src="@Model.ImageList.Split(",")[2]">
             <img id="gallery_image" src="@Model.ImageList.Split(",")[3]">
             <img id="gallery_image" src="@Model.ImageList.Split(",")[4]">
             <img id="gallery_image" src="@Model.ImageList.Split(",")[5]">
             <img id="gallery_image" src="@Model.ImageList.Split(",")[6]">
-            <img id="gallery_image" src="@Model.ImageList.Split(",")[7]">           
+            <img id="gallery_image" src="@Model.ImageList.Split(",")[7]">   *@        
         </div>
     </div>
     <div>

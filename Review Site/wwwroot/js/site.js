@@ -4,11 +4,13 @@
 // Write your JavaScript code.
 
 function hideLink() {
+    var w = document.getElementById("add_dest_button");
     var x = document.getElementById("all_reviews_button");
     var y = document.getElementsByClassName("delete_buttons");
     var z = document.getElementsByClassName("edit_buttons");
 
     if (x.style.display === "none") {
+        w.style.visibility = "visible"
         x.style.display = "inline-flex";
         Array.prototype.forEach.call(y, function (el) {
             el.style.display = "inline-flex";
@@ -17,6 +19,7 @@ function hideLink() {
             el.style.display = "inline-flex";
         });
     } else {
+        w.style.visibility = "hidden";
         x.style.display = "none";
         Array.prototype.forEach.call(y, function (el) {
             el.style.display = "none";
@@ -24,6 +27,7 @@ function hideLink() {
         Array.prototype.forEach.call(z, function (el) {
             el.style.display = "none";
         });
+
     }
 }
 

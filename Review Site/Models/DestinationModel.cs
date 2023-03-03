@@ -18,6 +18,7 @@ namespace Review_Site.Models
         public int TourDuration { get; set; }
         public int Price { get; set; }
         public string ImageURL { get; set; }
+        public string ImageList { get; set; }
         public virtual IEnumerable<ReviewModel>? Reviews { get; set; }
     }
 }

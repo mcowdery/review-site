@@ -118,9 +118,11 @@ body {
     color: cadetblue;
 }
 #destination_tours_list-header {
-    font-family:Arial, Helvetica, sans-serif;
-    color:ghostwhite;
-    font-size: 30px;
+    font-size: 35px;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
 }
 
 #details_button {

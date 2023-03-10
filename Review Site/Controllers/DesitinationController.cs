@@ -14,7 +14,7 @@ namespace Review_Site.Controllers
         {
             _context = context;
         }
-        public ActionResult Index()
+        public ActionResult Index(ReviewModel review)
         {
             return View(_context.Destinations
                 .Include(p => p.Reviews).ToList());
@@ -83,10 +83,11 @@ namespace Review_Site.Controllers
             }
             return View(destination);
         }
-        public ActionResult ReviewListEdit(int id)
+        [HttpGet("{Id}/{DestinationsId}")]
+        public ActionResult ReviewListEdit(int id, int destId)
         {
-            var review = _context.Reviews.Where(r => r.Id == id).FirstOrDefault();
-            review.DestinationsId = id;
+            var review = _context.Reviews.Where(r => r.Id == destId).FirstOrDefault();
+
             return View(review);
         }
         [HttpPost]
@@ -94,7 +95,11 @@ namespace Review_Site.Controllers
         {
             if (ModelState.IsValid)
             {
-                review.DestinationsId = review.Id;
+                //review.DestinationsId = ;
+                //var reviews = _context.Reviews.Where(r => r.Id == id).FirstOrDefault();
+                //var dest = _context.Destinations.Where(r => r.Id == id).FirstOrDefault();
+                //review.DestinationsId = dest.Id;
+
                 _context.Entry(review).State = EntityState.Modified;
                 _context.SaveChanges();
                 return RedirectToAction("ReviewsList", new { id = review.DestinationsId });

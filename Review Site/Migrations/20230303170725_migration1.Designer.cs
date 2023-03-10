@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Review_Site.Data;
 
@@ -11,9 +12,11 @@ using Review_Site.Data;
 namespace Review_Site.Migrations
 {
     [DbContext(typeof(ReviewSiteContext))]
-    partial class ReviewSiteContextModelSnapshot : ModelSnapshot
+    [Migration("20230303170725_migration1")]
+    partial class migration1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

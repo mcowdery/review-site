@@ -12,7 +12,7 @@ namespace Review_Site.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string connectionString = "Server=(localdb)\\mssqllocaldb;Database=ReviewSite33;Trusted_Connection=True;";
+            string connectionString = "Server=(localdb)\\mssqllocaldb;Database=ReviewSite35;Trusted_Connection=True;";
             optionsBuilder.UseSqlServer(connectionString);
         }
 
@@ -66,14 +66,7 @@ namespace Review_Site.Data
                     ImageList = "\\Images\\Mars11.jpg,\\Images\\Mars12.jpg,\\Images\\Mars13.jpg,\\Images\\Mars14.jpg,\\Images\\Mars15.jpg,\\Images\\Mars16.jpg,\\Images\\Mars17.jpg,\\Images\\Mars18.jpg,",
                     Price = 1000000,
                     TourDuration = 2156
-                });;
-
-
-
-
-
-
-
+                });
 
             modelBuilder.Entity<ReviewModel>().HasData(
                new ReviewModel()
@@ -117,9 +110,6 @@ namespace Review_Site.Data
                     DestinationsId = 1
                 },
 
-
-
-
                    new ReviewModel()
                    {
                        Id = 5,
@@ -160,9 +150,6 @@ namespace Review_Site.Data
                       StarRating = "4",
                       DestinationsId = 2
                   },
-
-
-
 
                     new ReviewModel()
                     {
